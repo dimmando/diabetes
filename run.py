@@ -19,7 +19,7 @@ print(Fore.RED + "More than 20 points" + Style.RESET_ALL + ": Very high risk\n")
     
 while True:
     try:
-        start = input("Let's get started? (Y/N): \n").upper()
+        start = input("Let's get started? " + Fore.BLUE + "(Y/N): " + Style.RESET_ALL).upper()
         if start == "Y":
             main()
             print("Start")
@@ -28,6 +28,6 @@ while True:
             print("No Start")
             break
         else:
-            raise ValueError(Fore.RED + ("Please choose Y or N!"))
-    except ValueError as e_rr:
-            print(f"Invalid input: {e_rr}")
+            raise ValueError(Fore.RED + ("Please choose Y or N!") + Style.RESET_ALL)
+    except ValueError as err:
+            print(f"Invalid input: {err}")
