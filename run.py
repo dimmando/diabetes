@@ -12,16 +12,16 @@ def main():
     menu_start()
     age = get_age()
     gender = get_gender()
+    
     if gender == "Male":
         waist = get_waist_male()
     else:
         waist = get_waist_female()
     print(waist)
 
+    bmi = body_mass_index()
+
     print("To be continued...")
-    # gender = get_gender()
-    # weight = get_weight()
-    # sport = get_sport()
 
 
 def introduction():
@@ -152,5 +152,42 @@ def get_waist_female():
     print(points)
 
     return points
+
+
+def body_mass_index():
+    while True:
+        try:
+            height = input("How tall are you in centimeters? " +
+            Fore.BLUE + "(For example 176): " + Style.RESET_ALL
+            )
+            if height.isnumeric() and int(height) > 120 and int(height) < 220:
+                break
+            else:
+                raise ValueError(
+                    Fore.RED + ("Please enter your real height in centimeters") + Style.RESET_ALL
+                )
+        except ValueError as err:
+            print(f"Invalid input: {err}")
+
+    print("")
+
+    while True:
+        try:
+            weight = input("How much do you weigh in kilograms? " +
+            Fore.BLUE + "(For example 83): " + Style.RESET_ALL
+            )
+            if weight.isnumeric() and int(weight) > 40 and int(weight) < 200: 
+                break
+            else:
+                raise ValueError(
+                    Fore.RED + ("Please enter your real weight in kilograms") + Style.RESET_ALL
+                )
+        except ValueError as err:
+            print(f"Invalid input: {err}")
+
+    get_bmi = round(float(weight) / (float(height)/100)**2, 1)
+    print(get_bmi)
+    return get_bmi
+
 
 main()
