@@ -10,7 +10,14 @@ def main():
     """
     introduction()
     menu_start()
-    gender_menu()
+    age = get_age()
+    gender = get_gender()
+    if gender == "Male":
+        waist = get_waist_male()
+    else:
+        waist = get_waist_female()
+    print(waist)
+
     print("To be continued...")
     # gender = get_gender()
     # weight = get_weight()
@@ -74,11 +81,76 @@ def menu_start():
             print(f"Invalid input: {err}")
 
 
-def gender_menu():
-    options = ["Male", "Female"]
-    terminal_menu = TerminalMenu(options, title="Choose your gender")
+def get_age():
+    options = ["Under 45 years old", "45 - 54 years old", "55 - 64 years old",
+    "Over 65 years old"]
+    terminal_menu = TerminalMenu(options, title="How old are you?")
     menu_entry_index = terminal_menu.show()
-    print(f"You have selected {options[menu_entry_index]}!")
+    print(f"You have selected your age: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}")
+    print("")
 
+    if menu_entry_index == 0:
+        points = 0
+    elif menu_entry_index == 1:
+        points = 2
+    elif menu_entry_index == 2:
+        points = 3
+    elif menu_entry_index == 3:
+        points = 4
+    
+    print(points)
+
+    return points
+
+
+def get_gender():
+    options = ["Male", "Female"]
+    terminal_menu = TerminalMenu(options, title="Choose your gender:")
+    menu_entry_index = terminal_menu.show()
+    print(f"You have selected your gender: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}")
+    print("")
+
+    if menu_entry_index == 0:
+        return "Male"
+    else:
+        return "Female"
+
+
+def get_waist_male():
+    options = ["Less than 94 cm", "94 - 102 cm", "More than 102 cm"]
+    terminal_menu = TerminalMenu(options, title="What is your waist measurement?\n(Hint: measure between your bottom rib and the top of your hip bone)")
+    menu_entry_index = terminal_menu.show()
+    print(f"You have selected your waist: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}")
+    print("")
+    
+    if menu_entry_index == 0:
+        points = 0
+    elif menu_entry_index == 1:
+        points = 3
+    elif menu_entry_index == 2:
+        points = 4
+        
+    print(points)
+
+    return points
+
+
+def get_waist_female():
+    options = ["Less than 80 cm", "80 - 88 cm", "More than 88 cm"]
+    terminal_menu = TerminalMenu(options, title="What is your waist measurement?\n(Hint: measure between your bottom rib and the top of your hip bone)")
+    menu_entry_index = terminal_menu.show()
+    print(f"You have selected your waist: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}")
+    print("")
+    
+    if menu_entry_index == 0:
+        points = 0
+    elif menu_entry_index == 1:
+        points = 3
+    elif menu_entry_index == 2:
+        points = 4
+        
+    print(points)
+
+    return points
 
 main()
