@@ -168,6 +168,7 @@ def body_mass_index():
                 )
         except ValueError as err:
             print(f"Invalid input: {err}")
+            print("")
 
     print("")
 
@@ -184,6 +185,7 @@ def body_mass_index():
                 )
         except ValueError as err:
             print(f"Invalid input: {err}")
+            print("")
 
     get_bmi = round(float(weight) / (float(height)/100)**2, 1)
     print(get_bmi)
