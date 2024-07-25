@@ -1,6 +1,8 @@
-from colorama import Fore, Back, Style  # import colors sheme
-from simple_term_menu import TerminalMenu
-import sys
+from colorama import Fore, Back, Style   # import colors sheme
+from simple_term_menu import TerminalMenu  # import Simple Terminal Menu
+import sys  # import sys library for correct exit from program
+from os import system  # import system functions for cleaning terminal
+
 
 def main():
     """
@@ -13,6 +15,7 @@ def main():
     # gender = get_gender()
     # weight = get_weight()
     # sport = get_sport()
+
 
 def introduction():
     """Introduction function"""
@@ -33,23 +36,30 @@ def introduction():
     print(Fore.MAGENTA + "15 - 20 points" + Style.RESET_ALL + ":      High risk")
     print(Fore.RED + "More than 20 points" + Style.RESET_ALL + ": Very high risk\n")
 
+
 def menu_start():
     while True:
         try:
-            start = input("Let's get started? " + Fore.BLUE + "(Y/N): " + Style.RESET_ALL).upper()
+            start = input("Let's get started? " + Fore.BLUE + "(Y/N): " +
+                    Style.RESET_ALL).upper()
             if start == "Y":
+                system("clear")
                 break
             elif start == "N":
+                print("")
                 sys.exit("Thank you for attention. Goodbye!")
             else:
-                raise ValueError(Fore.RED + ("Please choose Y or N") + Style.RESET_ALL)
+                raise ValueError(Fore.RED + ("Please choose Y or N") +
+                    Style.RESET_ALL)
         except ValueError as err:
-                print(f"Invalid input: {err}")
+            print(f"Invalid input: {err}")
+
 
 def gender_menu():
     options = ["Male", "Female"]
-    terminal_menu = TerminalMenu(options, title="Choose your gender", clear_screen=True)
+    terminal_menu = TerminalMenu(options, title="Choose your gender")
     menu_entry_index = terminal_menu.show()
     print(f"You have selected {options[menu_entry_index]}!")
+
 
 main()
