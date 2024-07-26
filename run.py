@@ -13,7 +13,7 @@ def main():
         introduction()
         menu_start()
 
-        conclusion(21)
+        conclusion(19)
 
         print("")
         test_again()
