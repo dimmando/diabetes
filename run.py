@@ -380,5 +380,4 @@ def test_again():
             print(f"Invalid input: {err}")
 
 
-main()
-"""Call the main function"""
+main()  # Call the main function
