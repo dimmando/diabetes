@@ -8,8 +8,15 @@ def main():
     """
     Main function that starts the test (risk) calculator
     """
-    introduction()
-    menu_start()
+    while True:
+        system("clear")
+        introduction()
+        menu_start()
+
+        conclusion(21)
+
+        print("")
+        test_again()
     """
     age = get_age()
 
@@ -28,27 +35,26 @@ def main():
     
     total = age + waist + bmi + fruits + exercises + medication + sugar_level + relatives
     """
-    conclusion(21)
+        
 
-    print("")
 
 def introduction():
     """Introduction function"""
     print(
         f"""{Fore.YELLOW}
-          Welcome to our program that helps to find out your risk of 
+        Welcome to our program that helps to find out your risk of 
                     type 2 diabetes in the next 10 years"""
     )
     print(
         f"""{Style.DIM}
-  To calculate your risk we will ask you for some data related to your health.
-  This program doesn't save or transfer any data you provided so anyone cannot 
-  identify you. You are in safe place.{Style.RESET_ALL}"""
+To calculate your risk we will ask you for some data related to your health.
+This program doesn't save or transfer any data you provided so anyone cannot 
+identify you. You are in safe place.{Style.RESET_ALL}"""
     )
     print(
         f"""
-  When you pass through our test you'll find out that potential risk level for 
-  developing diabetes in the next 10 years of life depending on points earned:
+When you pass through our test you'll find out that potential risk level for 
+developing diabetes in the next 10 years of life depending on points earned:
     """
     )
     print(Fore.GREEN + "Less than 12 points" + Style.RESET_ALL + ": Low risk")
@@ -357,6 +363,25 @@ f"You should check and control your blood sugar level, see an endocrinologist.",
 f"You should change your lifestyle; ",
 f"you may also need medication to control your blood sugar level."
 f"{Style.RESET_ALL}")
+
+
+def test_again():
+    while True:
+        try:
+            start = input(
+                "Would you like to test again? " + Fore.BLUE + "(Y/N): " + Style.RESET_ALL
+            ).upper()
+            if start == "Y":
+                break
+            elif start == "N":
+                print("")
+                sys.exit("Thank you for attention. Goodbye!")
+            else:
+                raise ValueError(
+                    Fore.RED + ("Please choose Y or N") + Style.RESET_ALL
+                )
+        except ValueError as err:
+            print(f"Invalid input: {err}")
 
 
 main()
