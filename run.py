@@ -358,9 +358,10 @@ f"{Style.RESET_ALL}")
 f"You scored more than 20 points",
 f"{Style.RESET_ALL}",
 f"{Fore.RED}",
-f"\nYou most likely have type 2 diabetes. ",
-f"You should check and control your blood sugar level, see an endocrinologist.",
-f"You should change your lifestyle; ",
+f"\nYou most likely have type 2 diabetes.",
+f"\nYou should check and control your blood sugar level, ",
+f"see an endocrinologist.",
+f"\nYou should change your lifestyle; ",
 f"you may also need medication to control your blood sugar level."
 f"{Style.RESET_ALL}")
 
