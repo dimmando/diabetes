@@ -13,7 +13,7 @@ def main():
         introduction()
         menu_start()
 
-        conclusion(19)
+        conclusion(14)
 
         print("")
         test_again()
@@ -46,7 +46,7 @@ def introduction():
                     type 2 diabetes in the next 10 years"""
     )
     print(
-        f"""{Style.DIM}
+        f"""
 To calculate your risk we will ask you for some data related to your health.
 This program doesn't save or transfer any data you provided so anyone cannot 
 identify you. You are in safe place.{Style.RESET_ALL}"""
