@@ -13,7 +13,7 @@ def main():
         introduction()
         menu_start()
 
-        conclusion(14)
+        conclusion(10)
 
         print("")
         test_again()
@@ -341,7 +341,7 @@ f"You scored 12 - 14 points",
 f"{Style.RESET_ALL}",
 f"{Fore.CYAN}",
 f"\nYou may have prediabetes. You should check your blood sugar level.",
-f"You should ask your doctor about lifestyle changes.",
+f"\nYou should ask your doctor about lifestyle changes.",
 f"{Style.RESET_ALL}")
     elif score <= 20:
         print(f"{Back.MAGENTA}",
