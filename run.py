@@ -6,8 +6,10 @@ from os import system  # import system functions for cleaning terminal
 
 def main():
     """
-    Main function that starts the test (risk) calculator
+    Main function that starts the test (risk) calculator that helps to find out
+    your risk of type 2 diabetes in the next 10 years
     """
+    
     while True:
         system("clear")
         introduction()
@@ -36,6 +38,7 @@ def main():
 
 def introduction():
     """Introduction function"""
+    
     print(
         f"""{Fore.YELLOW}
         Welcome to our program that helps to find out your risk of 
@@ -69,6 +72,8 @@ developing diabetes in the next 10 years of life depending on points earned:
 
 
 def menu_start():
+    """The function that provides choice for user to start test or not"""
+    
     while True:
         try:
             start = input(
@@ -89,6 +94,8 @@ def menu_start():
 
 
 def get_age():
+    """Getting age range points"""
+
     options = ["Under 45 years old", "45 - 54 years old", "55 - 64 years old",
     "Over 65 years old"]
     terminal_menu = TerminalMenu(options, title="How old are you?")
@@ -109,6 +116,8 @@ def get_age():
 
 
 def get_gender():
+    """Getting gender"""
+    
     options = ["Male", "Female"]
     terminal_menu = TerminalMenu(options, title="Choose your gender:")
     menu_entry_index = terminal_menu.show()
@@ -122,6 +131,8 @@ def get_gender():
 
 
 def get_waist_male():
+    """Getting waist points if Male"""
+
     options = ["Less than 94 cm", "94 - 102 cm", "More than 102 cm"]
     terminal_menu = TerminalMenu(options, title="What is your waist measurement?\n(Hint: measure between your bottom rib and the top of your hip bone)")
     menu_entry_index = terminal_menu.show()
@@ -139,6 +150,8 @@ def get_waist_male():
 
 
 def get_waist_female():
+    """Getting waist points if Female"""
+
     options = ["Less than 80 cm", "80 - 88 cm", "More than 88 cm"]
     terminal_menu = TerminalMenu(options, title="What is your waist measurement?\n(Hint: measure between your bottom rib and the top of your hip bone)")
     menu_entry_index = terminal_menu.show()
@@ -156,6 +169,11 @@ def get_waist_female():
 
 
 def body_mass_index():
+    """
+    Getting height, weight and calculating BMI. 
+    Getting points depending on BMI.
+    """
+
     while True:
         try:
             height = input("How tall are you in centimeters? " +
@@ -209,6 +227,8 @@ f"{Style.RESET_ALL}")
 
 
 def get_fruits():
+    """Getting points depending on eating fruits"""
+
     options = ["Every day", "Not every day"]
     terminal_menu = TerminalMenu(options, title="How often do you eat vegetables, fruits or berries?")
     menu_entry_index = terminal_menu.show()
@@ -224,6 +244,8 @@ def get_fruits():
 
 
 def get_exercises():
+    """Getting points depending on making physical exercises"""
+
     options = ["YES", "NO"]
     terminal_menu = TerminalMenu(options, title="Do you do physical exercises? \n(including walking for 30 minutes every day, at least 3 hours during the week)")
     menu_entry_index = terminal_menu.show()
@@ -239,6 +261,8 @@ def get_exercises():
 
 
 def get_medication():
+    """Getting points depending on taking medications"""
+
     options = ["NO", "YES"]
     terminal_menu = TerminalMenu(options, title="Have you ever taken medication to lower your blood pressure?")
     menu_entry_index = terminal_menu.show()
@@ -254,21 +278,8 @@ def get_medication():
 
 
 def get_sugar_level():
-    options = ["NO", "YES"]
-    terminal_menu = TerminalMenu(options, title="Have you ever had high blood sugar level? \n(during check-ups, illness or pregnancy)")
-    menu_entry_index = terminal_menu.show()
-    print(f"You have selected you had high blood sugar level: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}")
-    print("")
+    """Getting points depending on previously detected high blood sugar level"""
 
-    if menu_entry_index == 0:
-        points = 0
-    elif menu_entry_index == 1:
-        points = 5
-
-    return points
-
-
-def get_sugar_level():
     options = ["NO", "YES"]
     terminal_menu = TerminalMenu(options, title="Have you ever had high blood sugar level? \n(during check-ups, illness or pregnancy)")
     menu_entry_index = terminal_menu.show()
@@ -284,6 +295,8 @@ def get_sugar_level():
 
 
 def get_relatives():
+    """Getting points depending on diabetes detected on relatives"""
+    
     options = ["Yes. Parents, brother/sister, children", "Yes. Grandparents, aunts/uncles, cousins", "NO"]
     terminal_menu = TerminalMenu(options, title="Did any of your relatives have type 1 or type 2 diabetes?")
     menu_entry_index = terminal_menu.show()
@@ -296,11 +309,13 @@ def get_relatives():
         points = 2
     elif menu_entry_index == 2:
         points = 0
-        
+
     return points
 
 
 def conclusion(score):
+    """Conclusion function that provides result depending on points earned"""
+
     print("CONCLUSION:")
 
     if score < 12:
@@ -319,6 +334,7 @@ f"{Fore.CYAN}",
 f"\nYou may have prediabetes. You should check your blood sugar level.",
 f"\nYou should ask your doctor about lifestyle changes.",
 f"{Style.RESET_ALL}")
+
     elif score <= 20:
         print(f"{Back.MAGENTA}",
 f"You scored 15 - 20 points",
@@ -329,6 +345,7 @@ f"You should check your blood sugar level. ",
 f"You should see an endocrinologist, change your lifestyle; ",
 f"you may need medication to control your blood sugar level."
 f"{Style.RESET_ALL}")
+    
     elif score > 20:
         print(f"{Back.RED}",
 f"You scored more than 20 points",
@@ -343,6 +360,8 @@ f"{Style.RESET_ALL}")
 
 
 def test_again():
+    """Question function if user wants to test again"""
+
     while True:
         try:
             start = input(
@@ -362,3 +381,4 @@ def test_again():
 
 
 main()
+"""Call the main function"""
