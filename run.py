@@ -104,8 +104,6 @@ def get_age():
         points = 3
     elif menu_entry_index == 3:
         points = 4
-    
-    print(points)
 
     return points
 
@@ -136,8 +134,6 @@ def get_waist_male():
         points = 3
     elif menu_entry_index == 2:
         points = 4
-        
-    print(points)
 
     return points
 
@@ -155,8 +151,6 @@ def get_waist_female():
         points = 3
     elif menu_entry_index == 2:
         points = 4
-        
-    print(points)
 
     return points
 
@@ -203,15 +197,13 @@ f"BMI is a simple way to check if your weight is healthy for your height\n",
 f"Why does this matter?\n",
 f"Being overweight or obese increases your risk of type 2 diabetes\n",
 f"{Style.RESET_ALL}")
-    
+
     if get_bmi < 25:
         points = 0
     elif get_bmi <= 30:
         points = 1
     elif get_bmi > 30:
         points = 3
-        
-    print(points)
 
     return points
 
@@ -227,8 +219,6 @@ def get_fruits():
         points = 0
     elif menu_entry_index == 1:
         points = 1
-    
-    print(points)
 
     return points
 
@@ -244,8 +234,6 @@ def get_exercises():
         points = 0
     elif menu_entry_index == 1:
         points = 2
-    
-    print(points)
 
     return points
 
@@ -261,8 +249,6 @@ def get_medication():
         points = 0
     elif menu_entry_index == 1:
         points = 2
-    
-    print(points)
 
     return points
 
@@ -278,8 +264,6 @@ def get_sugar_level():
         points = 0
     elif menu_entry_index == 1:
         points = 5
-    
-    print(points)
 
     return points
 
@@ -295,8 +279,6 @@ def get_sugar_level():
         points = 0
     elif menu_entry_index == 1:
         points = 5
-    
-    print(points)
 
     return points
 
@@ -314,9 +296,7 @@ def get_relatives():
         points = 2
     elif menu_entry_index == 2:
         points = 0
-    
-    print(points)
-
+        
     return points
 
 
