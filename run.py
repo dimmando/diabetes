@@ -12,30 +12,26 @@ def main():
         system("clear")
         introduction()
         menu_start()
+        age = get_age()
+        gender = get_gender()
+        
+        if gender == "Male":
+            waist = get_waist_male()
+        else:
+            waist = get_waist_female()
 
-        conclusion(10)
-
+        bmi = body_mass_index()
+        fruits = get_fruits()
+        exercises = get_exercises()
+        medication = get_medication()
+        sugar_level = get_sugar_level()
+        relatives = get_relatives()
+        
+        total = age + waist + bmi + fruits + exercises + medication + sugar_level + relatives
+        
+        conclusion(total)
         print("")
         test_again()
-    """
-    age = get_age()
-
-    gender = get_gender()
-    if gender == "Male":
-        waist = get_waist_male()
-    else:
-        waist = get_waist_female()
-
-    bmi = body_mass_index()
-    fruits = get_fruits()
-    exercises = get_exercises()
-    medication = get_medication()
-    sugar_level = get_sugar_level()
-    relatives = get_relatives()
-    
-    total = age + waist + bmi + fruits + exercises + medication + sugar_level + relatives
-    """
-        
 
 
 def introduction():
