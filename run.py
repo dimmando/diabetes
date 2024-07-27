@@ -216,7 +216,7 @@ def body_mass_index():
                 + "(For example 176): "
                 + Style.RESET_ALL
             )
-            if height.isnumeric() and int(height) > 140 and int(height) < 220:
+            if height.isnumeric() and int(height) > 130 and int(height) < 220:
                 break
             else:
                 raise ValueError(
@@ -238,7 +238,7 @@ def body_mass_index():
                 + "(For example 83): "
                 + Style.RESET_ALL
             )
-            if weight.isnumeric() and int(weight) > 40 and int(weight) < 200:
+            if weight.isnumeric() and int(weight) > 30 and int(weight) < 200:
                 break
             else:
                 raise ValueError(
@@ -480,5 +480,5 @@ def test_again():
         except ValueError as err:
             print(f"Invalid input: {err}")
 
-
-main()  # Call the main function
+if __name__ == '__main__':
+    main()  # Call the main function
