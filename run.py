@@ -55,7 +55,7 @@ def introduction():
     print("")
     print(
         f"To calculate your risk we will ask you for some data related to",
-        f"your health. This program doesn't save or transfer any data you",
+        f"your health. \nThis program doesn't save or transfer any data you",
         f"provided so anyone cannot identify you. You are in safe place.",
         f"{Style.RESET_ALL}"
     )
