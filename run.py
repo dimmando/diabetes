@@ -50,20 +50,20 @@ def introduction():
 
     print(
         f"{Fore.YELLOW}",
-        f"        Welcome to our program that helps to find out your risk of\n",
-        f"                  type 2 diabetes in the next 10 years")
+        f"       Welcome to our program that helps to find out your risk of\n",
+        f"                 type 2 diabetes in the next 10 years")
     print("")
     print(
-        f"To calculate your risk we will ask you for some data related to your", 
-        f"health. This program doesn't save or transfer any data you provided", 
-        f"so anyone cannot identify you. You are in safe place.",
+        f"To calculate your risk we will ask you for some data related to",
+        f"your health. This program doesn't save or transfer any data you",
+        f"provided so anyone cannot identify you. You are in safe place.",
         f"{Style.RESET_ALL}"
     )
     print("")
     print(
         f"When you pass through our test you'll find out that potential risk",
-        f"level for developing diabetes in the next 10 years of life depending",
-        f"on points earned:"
+        f"level for developing diabetes in the next 10 years of life",
+        f"depending on points earned:"
     )
     print("")
     print(Fore.GREEN + "Less than 12 points" + Style.RESET_ALL + ": Low risk")
@@ -115,7 +115,8 @@ def get_age():
     terminal_menu = TerminalMenu(options, title="How old are you?")
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected your age: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected your age:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -138,7 +139,8 @@ def get_gender():
     terminal_menu = TerminalMenu(options, title="Choose your gender:")
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected your gender: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected your gender:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -154,11 +156,13 @@ def get_waist_male():
     options = ["Less than 94 cm", "94 - 102 cm", "More than 102 cm"]
     terminal_menu = TerminalMenu(
         options,
-        title="What is your waist measurement?\n(Hint: measure between your bottom rib and the top of your hip bone)",
+        title="What is your waist measurement?\n" +
+        "(Hint: measure between your bottom rib and the top of your hip bone)"
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected your waist: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected your waist:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -178,11 +182,13 @@ def get_waist_female():
     options = ["Less than 80 cm", "80 - 88 cm", "More than 88 cm"]
     terminal_menu = TerminalMenu(
         options,
-        title="What is your waist measurement?\n(Hint: measure between your bottom rib and the top of your hip bone)",
+        title="What is your waist measurement?\n" +
+        "(Hint: measure between your bottom rib and the top of your hip bone)"
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected your waist: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected your waist:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -255,10 +261,11 @@ def body_mass_index():
     )
     print(
         f"{Fore.CYAN}{Style.DIM}",
-        f"BMI is a simple way to check if your weight is healthy for your height\n",
+        f"BMI is a simple way to check if your weight is healthy for your",
+        f"height.\n",
         f"Why does this matter?\n",
-        f"Being overweight or obese increases your risk of type 2 diabetes\n",
-        f"{Style.RESET_ALL}",
+        f"Being overweight or obese increases your risk of type 2 diabetes.\n",
+        f"{Style.RESET_ALL}"
     )
 
     if get_bmi < 25:
@@ -280,7 +287,8 @@ def get_fruits():
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected you eat vegetables, fruits or berries: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected you eat vegetables, fruits or berries:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -298,11 +306,14 @@ def get_exercises():
     options = ["YES", "NO"]
     terminal_menu = TerminalMenu(
         options,
-        title="Do you do physical exercises? \n(including walking for 30 minutes every day, at least 3 hours during the week)",
+        title="Do you do physical exercises?\n" +
+        "(including walking for 30 minutes every day," +
+        "at least 3 hours during the week)"
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected you do physical exercises: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected you do physical exercises:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -320,11 +331,12 @@ def get_medication():
     options = ["NO", "YES"]
     terminal_menu = TerminalMenu(
         options,
-        title="Have you ever taken medication to lower your blood pressure?",
+        title="Have you ever taken medication to lower your blood pressure?"
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected you took medication to lower your blood pressure: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected you took medication to lower your blood pressure:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -337,16 +349,18 @@ def get_medication():
 
 
 def get_sugar_level():
-    """Getting points depending on previously detected high blood sugar level"""
+    """Get points depending on previously detected high blood sugar level"""
 
     options = ["NO", "YES"]
     terminal_menu = TerminalMenu(
         options,
-        title="Have you ever had high blood sugar level? \n(during check-ups, illness or pregnancy)",
+        title="Have you ever had high blood sugar level?\n" +
+        "(during check-ups, illness or pregnancy)"
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected you had high blood sugar level: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected you had high blood sugar level:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -368,11 +382,12 @@ def get_relatives():
     ]
     terminal_menu = TerminalMenu(
         options,
-        title="Did any of your relatives have type 1 or type 2 diabetes?",
+        title="Did any of your relatives have type 1 or type 2 diabetes?"
     )
     menu_entry_index = terminal_menu.show()
     print(
-        f"You have selected your relatives had type 1 or type 2 diabetes: {Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
+        f"You have selected your relatives had type 1 or type 2 diabetes:",
+        f"{Fore.YELLOW}{options[menu_entry_index]}{Style.RESET_ALL}"
     )
     print("")
 
@@ -397,7 +412,8 @@ def conclusion(score):
             f"You earned less than 12 points",
             f"{Style.RESET_ALL}",
             f"{Fore.GREEN}",
-            f"\nYou are in good health and should continue to live a healthy lifestyle.",
+            f"\nYou are in good health and should continue to live a healthy",
+            f"lifestyle.",
             f"{Style.RESET_ALL}",
         )
 
@@ -407,7 +423,8 @@ def conclusion(score):
             f"You earned 12 - 14 points",
             f"{Style.RESET_ALL}",
             f"{Fore.CYAN}",
-            f"\nYou may have prediabetes. You should check your blood sugar level.",
+            f"\nYou may have prediabetes. You should check your blood sugar",
+            f"level.",
             f"\nYou should ask your doctor about lifestyle changes.",
             f"{Style.RESET_ALL}",
         )
