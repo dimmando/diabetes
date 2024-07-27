@@ -56,13 +56,13 @@ def introduction():
     print(
         f"To calculate your risk we will ask you for some data related to",
         f"your health. \nThis program doesn't save or transfer any data you",
-        f"provided so anyone cannot identify you. You are in safe place.",
+        f"provided so anyone cannot \nidentify you. You are in safe place.",
         f"{Style.RESET_ALL}"
     )
     print("")
     print(
         f"When you pass through our test you'll find out that potential risk",
-        f"level for developing diabetes in the next 10 years of life",
+        f"level for \ndeveloping diabetes in the next 10 years of life",
         f"depending on points earned:"
     )
     print("")
