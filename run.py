@@ -1,7 +1,7 @@
-from colorama import Fore, Back, Style  # import colors sheme
-from simple_term_menu import TerminalMenu  # import Simple Terminal Menu
 import sys  # import sys library for correct exit from program
 from os import system  # import system functions for cleaning terminal
+from colorama import Fore, Back, Style  # import colors sheme
+from simple_term_menu import TerminalMenu  # import Simple Terminal Menu
 
 
 def main():
@@ -183,7 +183,7 @@ def get_waist_female():
     terminal_menu = TerminalMenu(
         options,
         title="What is your waist measurement?\n" +
-        "(Hint: measure between your bottom rib and the top of your hip bone)"
+        "(Hint: measure between your lowest rib and the top of your hip bone)"
     )
     menu_entry_index = terminal_menu.show()
     print(
@@ -270,10 +270,15 @@ def body_mass_index():
 
     if get_bmi < 25:
         points = 0
+        print(f"{Fore.GREEN}Your BMI is very good{Style.RESET_ALL}\n")
+
     elif get_bmi <= 30:
         points = 1
+        print(f"{Fore.MAGENTA}Your BMI is average{Style.RESET_ALL}\n")
+
     elif get_bmi > 30:
         points = 3
+        print(f"{Fore.RED}Your BMI is bad{Style.RESET_ALL}\n")
 
     return points
 
