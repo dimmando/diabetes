@@ -405,10 +405,10 @@ def conclusion(score):
             f"You earned 15 - 20 points",
             f"{Style.RESET_ALL}",
             f"{Fore.MAGENTA}",
-            f"\nYou may have prediabetes or type 2 diabetes. ",
-            f"You should check your blood sugar level. ",
-            f"You should see an endocrinologist, change your lifestyle; ",
-            f"you may need medication to control your blood sugar level."
+            f"\nYou may have prediabetes or type 2 diabetes.",
+            f"You should check your blood sugar level.",
+            f"You should see an endocrinologist, change your lifestyle;",
+            f"you may need medication to control your blood sugar level.",
             f"{Style.RESET_ALL}",
         )
 
@@ -419,10 +419,10 @@ def conclusion(score):
             f"{Style.RESET_ALL}",
             f"{Fore.RED}",
             f"\nYou most likely have type 2 diabetes.",
-            f"\nYou should check and control your blood sugar level, ",
+            f"\nYou should check and control your blood sugar level,",
             f"see an endocrinologist.",
             f"\nYou should change your lifestyle; ",
-            f"you may also need medication to control your blood sugar level."
+            f"you may also need medication to control your blood sugar level.",
             f"{Style.RESET_ALL}",
         )
 
