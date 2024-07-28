@@ -2,11 +2,12 @@ import sys  # import sys library for correct exit from program
 from os import system  # import system functions for cleaning terminal
 from colorama import Fore, Back, Style  # import colors sheme
 from simple_term_menu import TerminalMenu  # import Simple Terminal Menu
+from introduction import *  # import introduction() function from separate file
 
 
 def main():
     """
-    Main function that starts the test (risk) calculator that helps to find out
+    Main function that starts test (risk) calculator that helps to find out
     your risk of type 2 diabetes in the next 10 years
     """
 
@@ -43,42 +44,6 @@ def main():
         conclusion(total)
         print("")
         test_again()
-
-
-def introduction():
-    """Introduction function"""
-
-    print(
-        f"{Fore.YELLOW}",
-        f"       Welcome to our program that helps to find out your risk of\n",
-        f"                 type 2 diabetes in the next 10 years")
-    print("")
-    print(
-        f"To calculate your risk we will ask you for some data related to",
-        f"your health. \nThis program doesn't save or transfer any data you",
-        f"provided so anyone cannot \nidentify you. You are in safe place.",
-        f"{Style.RESET_ALL}"
-    )
-    print("")
-    print(
-        f"When you pass through our test you'll find out that potential risk",
-        f"level for \ndeveloping diabetes in the next 10 years of life",
-        f"depending on points earned:"
-    )
-    print("")
-    print(Fore.GREEN + "Less than 12 points" + Style.RESET_ALL + ": Low risk")
-    print(
-        Fore.CYAN + "12 - 14 points" + Style.RESET_ALL + ":      Average risk"
-    )
-    print(
-        Fore.MAGENTA + "15 - 20 points" + Style.RESET_ALL + ":      High risk"
-    )
-    print(
-        Fore.RED
-        + "More than 20 points"
-        + Style.RESET_ALL
-        + ": Very high risk\n"
-    )
 
 
 def menu_start():
@@ -484,6 +449,7 @@ def test_again():
                 )
         except ValueError as err:
             print(f"Invalid input: {err}")
+
 
 if __name__ == '__main__':
     main()  # Call the main function
