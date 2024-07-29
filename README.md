@@ -6,6 +6,9 @@ It's a well-known questionnaire in different countries as the diabetes problems 
 
 When user pass through this questionnaire he/she will find out that potential risk level for developing diabetes in the next 10 years of life depending on points earned. Each answer corresponds a certain number of points. Points are not displayed to the user until the end of the questionnaire with the aim that user is being honestly. So in the end program calculates total points quantity and provides conclusion with recommendations what to do.
 
+This program doesn't save or transfer any data users provide to aim anyone cannot
+identify users due to possible sensitive data for them.
+
 Diabetes type 2 risk calculator can be accessed by this [link](https://diabet-50dfd36a4254.herokuapp.com/)
 
 ![Responsive Mockup](documentation/responsive.png)
