@@ -26,7 +26,7 @@ Diabetes type 2 risk calculator can be accessed by this [link](https://diabet-50
 
 ### Frequent Visitor Goals:
 
-* As a Frequent User, I want to have possibility restart the program if I forgot some parameters or wasn't ready so I can restart the questionnaire.
+* As a Frequent User, I want to have possibility restart the program if I forgot some parameters or wasn't ready or something have changed in my life so I can restart the questionnaire.
 
 ---
 
@@ -164,9 +164,6 @@ The flowchart represents the logic of the application:
 - [Awesome Screenshot](chrome-extension://nlipoenfbbikpbjkfpfillcgkoblgpmj/option-react.html) - Chrome extension was used to making screenshots 
 
 ---
-
-## Bugs
-
 
 ## Testing
 

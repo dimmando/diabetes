@@ -21,25 +21,57 @@ Used PEP8 Python Validator to validate my code
  
 User Story |  Test | Pass
 --- | --- | :---:
-I want to understand the main purpose of the site | I can read text Beauty Studio and services provided just in the center of the screen. | &check;​
-I want to be able easily navigate through the website | I can either scroll down and see at once an information related to services or choose required menu item and go to page interested for me | &check;​
-I want to see the prices to compare it with the other competitors | Prices we can see at once under the list of the services | &check;
-I want to see how the Beauty Studio looks like | I can choose OUR STUDIO menu item and go to page with the photos gallery | &check;
-I want to see phone number and opening hours | I can easily scroll down to the bottom or choose CONTACTS menu item and go to contact information at the bottom of Main Page | &check;
-I want to see if location close to me | I can see the Google Map insertion at the bottom of Main Page, open it and make a pathway to me | &check;
-I want to find a way how to book an appointment with the specialist in the Beauty Studio | I can tap/click on the button BOOK NOW! just on the Main Page at start screen or choose the BOOKING menu item and go to the Booking page | &check;
-I want to have easy way for frequently booking a visiting time | I can do it quickly by tapping/clicking button BOOK NOW! just on the Main Page at start screen | &check;
-I want to see prices always on top | Prices always under heading text of the services provided after background picture with the girls | &check;
+I want to quickly understand the program's primary purpose so that I can learn more what that program is about. | I can read welcome text with the description of the program just in the center of the screen | &check;​
+I want to navigate through the program easily so that I can find the content | I can easily go step by step through the test answering the questions | &check;​
+I want to find the program useful for myself so that I can fulfill my expectations | The program is made for helth life style main purpose so can be intersting anyone| &check;
+I want to pass through the questionnaire if I didn't yet so I can start it just in one click | I can choose and input only one button "y" to easily start the test | &check;
+I want to see my final points and recommendations what to do so it's information always be there | I can easily pass through the test step by step and final points and recommendations will always be at the end despite on how to answer on questions | &check;
+I want to have possibility restart the program if I forgot some parameters or wasn't ready or something have changed in my life so I can restart the questionnaire | I can easily restart the program in the end to test again. The program can work in the loop | &check;
+
+ ### Manual Testing
+
+ #### Welcome screen and question "Let's get started?"
+
+<details><summary>Screenshot</summary>
+<img src="documentation/welcome.png">
+</details>
+
+  - I've tested that the input field for choosing "Y" or "N" takes only  letter "y", "Y", "n", "N" and nothing else and that error message is displayed to the user that warns the user of his input
+
+ #### Check the height input 
+
+<details><summary>Screenshot</summary>
+<img src="documentation/height.png">
+</details>
+
+   - I've tested that on prompt to user input the height only real range of height is allowed and no letters allowed. Only numbers. And that  error message is shown to the user and promt to enter real height.
+
+ #### Check the weight input 
+
+<details><summary>Screenshot</summary>
+<img src="documentation/weight.png">
+</details>
+
+  - I've tested that on prompt to user input the weight only real range of weight is allowed and no letters allowed. Only numbers. And that  error message is shown to the user and promt to enter real weight.
+
+ #### Conclusion screen
+
+<details><summary>Screenshot</summary>
+<img src="documentation/result.png">
+</details>
+
+  - I've tested that the input field for choosing "Y" or "N" on conclusion screen with the question ether user wants to take test again takes only letter "y", "Y", "n", "N" and nothing else and that error message is displayed to the user that warns the user of his input.
+
 
 ## Bugs
 + ### Solved bugs
-    There were some bugs in JavaScript code specifically in score counters and in Start New Quiz button action at the end of the Quiz but all issues were resolved.
+    Most of bugs were found during formatting, styling and coloring welcome description, questions and providing answers on questions. Also in formatting result for good UX.
     
-        *Solutions:* periodically checking console.log() outputs in Console of DevTools Chrome Browser.
+        *Solutions:* refactoring print statements, debugging by isolating some functions, putting numbers and checking output only one function needed to correct.
 
 + ### Unsolved bugs
     None.
 
 + ### Mistakes
-    Mistakes were made in CSS alignment different elements but all of them finally have been solved by proper styling.    
+    No mistakes were found due to very simple math calculations.    
 ---
