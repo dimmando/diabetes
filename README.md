@@ -116,7 +116,7 @@ Diabetes type 2 risk calculator can be accessed by this [link](https://diabet-50
 
    Conclusion is based on calculated sum of points user earned answering on questions which correspond a certain number of points each. Conclusion is represented by a range of points and recommendations what user may do next in life.
 
-   Also displayed a question either user whants to start test again or quit.
+   Also displayed a question either user wants to start test again or quit.
 
 ![Conclusion](documentation/conclusion.png)
 
